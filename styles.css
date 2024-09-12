@@ -1,30 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root{
-    --verde-main: #2B766D ;
+:root {
+    --verde-main: #2B766D;
     --verde-escuro: #062B26;
-    --verde-claro:#B0D7C0;
-    --preto:#000000;
+    --verde-claro: #B0D7C0;
+    --preto: #000000;
 
 }
 
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
 
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
+/* For mobile:  */
+@media only screen and (min-width:600px) {}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+    }
+
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    .btn {}
 }
