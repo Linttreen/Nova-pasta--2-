@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --verde-main: #2B766D;
+    --verde-escuro: #062B26;
+    --verde-claro: #B0D7C0;
+    --preto: #000000;
+
+}
+
+
+/* For mobile:  */
+@media only screen and (min-width:600px) {}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: 768px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'Suse', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--verde-main);
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        height: 100px;
+    }
+
+    h4 {
+        position: absolute;
+        top: 2rem;
+    }
+
+    .icon {
+        position: absolute;
+        top: -50px;
+        left: 85%;
+
+    }
+
+    .icon i {
+        position: relative;
+        font-size: 40px;
+        height: 55px;
+        left: 85px;
+        top: 4.1rem;
+        z-index: 1;
+        color: var(--verde-escuro);
+        cursor: pointer;
+    }
+
+    .icon a {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        left: 75px;
+        top: 5rem;
+
+        background: #B0D7C0;
+        border-radius: 80px;
+    }
+
+    .carrossel{
+        display: flex;
+        position: relative;
+        gap: 10px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    .carrossel .item1 img{
+        z-index: -1;
+    }
+
+    .carrossel .item1 .content{
+        position: absolute;
+        top: -50px;
+        z-index: 100;
+    }
+
+
+}
