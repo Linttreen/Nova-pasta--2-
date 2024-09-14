@@ -83,7 +83,11 @@
         overflow-y: hidden;
         white-space: nowrap;
         padding: 10px;
+        scroll-behavior: smooth;
+        scrollbar-width: 10px;
+        scroll-snap-align:inherit;
     }
+
     .carrossel .item1 img{
         z-index: -1;
     }
