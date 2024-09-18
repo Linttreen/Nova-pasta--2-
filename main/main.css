@@ -203,6 +203,10 @@
         flex-direction: column;
     }
 
+    .parte2 .quadros .quadro1 .text img{
+        border-radius: 1rem;
+    }
+
     .parte2 .quadros .quadro1 .text a{
         z-index: 1;
         color: white;
@@ -211,6 +215,9 @@
     .parte2 .quadros .quadro2 .text{
         display: flex;
         flex-direction: column;
+    }
+    .parte2 .quadros .quadro2 .text img{
+        border-radius: 1rem;
     }
 
     .parte2 .quadros .quadro2 .text a{
@@ -229,6 +236,11 @@
         display: flex;
         flex-direction: column;
     }
+
+    .parte2 .quadros .quadro3 .text img{
+        border-radius: 1rem;
+    }
+
 
     .parte2 .quadros .quadro3 .text a{
         z-index: 1;
@@ -292,6 +304,11 @@
         flex-direction: column;
     }
 
+    .parte3 .quadros .quadro1 .text img{
+        border-radius: 1rem;
+    }
+
+
     .parte3 .quadros .quadro1 .text a{
         z-index: 1;
         color: white;
@@ -301,6 +318,11 @@
         display: flex;
         flex-direction: column;
     }
+
+    .parte3 .quadros .quadro2 .text img{
+        border-radius: 1rem;
+    }
+
 
     .parte3 .quadros .quadro2 .text a{
         z-index: 1;
@@ -318,6 +340,11 @@
         display: flex;
         flex-direction: column;
     }
+
+    .parte3 .quadros .quadro3 .text img{
+        border-radius: 1rem;
+    }
+
 
     .parte3 .quadros .quadro3 .text a{
         z-index: 1;
@@ -381,6 +408,11 @@
             display: flex;
             flex-direction: column;
         }
+
+        .parte4 .quadros .quadro1 .text img{
+            border-radius: 1rem;
+        }
+    
     
         .parte4 .quadros .quadro1 .text a{
             z-index: 1;
@@ -390,6 +422,10 @@
         .parte4 .quadros .quadro2 .text{
             display: flex;
             flex-direction: column;
+        }
+
+        .parte4 .quadros .quadro2 .text img{
+            border-radius: 1rem;
         }
     
         .parte4 .quadros .quadro2 .text a{
@@ -408,6 +444,10 @@
             display: flex;
             flex-direction: column;
         }
+
+        .parte4 .quadros .quadro3 .text img{
+            border-radius: 1rem;
+        }    
     
         .parte4 .quadros .quadro3 .text a{
             z-index: 1;
@@ -438,6 +478,7 @@
         padding-top: 2rem;
         background-color: var(--verde-escuro);
         height: fit-content;
+        padding-bottom: 4rem;
     }
 
     .parte5 .title {
@@ -471,6 +512,10 @@
         flex-direction: column;
     }
 
+    .parte5 .quadros .quadro1 .text img{
+        border-radius: 1rem;
+    }
+
     .parte5 .quadros .quadro1 .text a{
         z-index: 1;
         color: white;
@@ -479,6 +524,10 @@
     .parte5 .quadros .quadro2 .text{
         display: flex;
         flex-direction: column;
+    }
+
+    .parte5 .quadros .quadro2 .text img{
+        border-radius: 1rem;
     }
 
     .parte5 .quadros .quadro2 .text a{
@@ -498,6 +547,10 @@
         flex-direction: column;
     }
 
+    .parte5 .quadros .quadro3 .text img{
+        border-radius: 1rem;
+    }
+
     .parte5 .quadros .quadro3 .text a{
         z-index: 1;
         color: white;
@@ -508,9 +561,27 @@
         flex-direction: column;
     }
 
+    .parte5 .quadros .quadro4 .text img{
+        border-radius: 1rem;
+    }
+
     .parte5 .quadros .quadro4 .text a{
         z-index: 1;
         color: white;
+    }
+
+    footer{
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    footer h6{
+        font-size: .9rem;
     }
 
 }
