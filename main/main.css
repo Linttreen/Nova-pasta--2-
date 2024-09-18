@@ -39,7 +39,14 @@
         justify-content: center;
         font-size: 3rem;
         height: 100px;
+        cursor: pointer;
     }
+
+    h4:hover{
+        top: 1.9rem;
+        transition: smooth;
+    }
+
 
     h4 {
         position: absolute;
@@ -74,6 +81,13 @@
         background: #B0D7C0;
         border-radius: 80px;
     }
+
+    .icon:hover{
+        top: -3.3rem;
+        transition: smooth;
+    }
+
+    /* parte 1 */
 
     .parte1 {
         height: 30rem;
@@ -150,6 +164,8 @@
         padding: 10px;
         top: 60%;
     }
+
+    /* parte 2 */
 
     .parte2 {
         background-color: var(--verde-escuro);
@@ -232,6 +248,95 @@
     }
 
     .parte2 .quadros .circulo i:hover{
+        background-color: var(--verde-main);
+        color: var(--preto);
+        transition: smooth;
+    }
+
+    /*parte 3*/
+
+    .parte3 {
+        padding-top: 2rem;
+        background-color: var(--verde-escuro);
+        height: fit-content;
+    }
+
+    .parte3 .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--verde-claro);
+        z-index: -1;
+        padding: 2rem;
+    }
+
+    .parte3 .quadros{
+        background-color: var(--verde-escuro);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .parte3 .quadros .quadros-1{
+        display: flex;
+        flex-direction:column;
+        gap: 20px;
+    }
+
+    .parte3 .quadros .quadro1 .text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parte3 .quadros .quadro1 .text a{
+        z-index: 1;
+        color: white;
+    }
+
+    .parte3 .quadros .quadro2 .text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parte3 .quadros .quadro2 .text a{
+        z-index: 1;
+        color: white;
+    }
+
+    .parte3 .quadros .quadros-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .parte3 .quadros .quadro3 .text{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parte3 .quadros .quadro3 .text a{
+        z-index: 1;
+        color: white;
+    }
+
+    .parte3 .quadros .circulo i {
+        position: relative;
+        font-size: 100px;
+        z-index: 1;
+        color: var(--verde-escuro);
+        cursor: pointer;
+        background-color: var(--verde-claro);
+        padding: 40px;
+        border-radius: 50%;
+        top: -2.5rem;
+    }
+
+    .parte3 .quadros .circulo i:hover{
         background-color: var(--verde-main);
         color: var(--preto);
         transition: smooth;
