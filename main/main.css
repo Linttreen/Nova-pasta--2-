@@ -30,7 +30,10 @@
 
     body {
         margin: 0;
-        background-color: var(--verde-main);
+        background-color: var(--verde-escuro);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
     }
 
     header {
@@ -42,7 +45,7 @@
         cursor: pointer;
     }
 
-    h4:hover{
+    h4:hover {
         top: 1.9rem;
         transition: smooth;
     }
@@ -83,87 +86,89 @@
         border-radius: 80px;
     }
 
-    .icon:hover{
+    .icon:hover {
         top: -3.3rem;
         transition: smooth;
     }
 
     /* parte 1 */
 
-    .parte1 {
-        height: 30rem;
-        background-image: linear-gradient(#2B766D, #134640, #062A26);
-    }
-
-    .carrossel {
+    .container {
+        padding: 2rem;
+        width: 100%;
         display: flex;
-        position: relative;
+        justify-content: center;
+        height: 500px;
         gap: 10px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        padding: 10px;
-    }
 
-    .carrossel::-webkit-scrollbar {
-        background-color: transparent;
-        height: 10px;
-        width: 10px;
-        border: 1px solid var(--verde-escuro);
-        border-radius: 1.5rem;
-    }
+        >div {
+            flex: 0 0 120px;
+            border-radius: 0.5rem;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px var(--verde-main);
+            position: relative;
+            overflow: hidden;
 
-    .carrossel::-webkit-scrollbar-thumb {
-        background: var(--verde-claro);
-        border-radius: .9rem;
-        width: 10px;
-        height: 10rem;
-    }
+            &:nth-of-type(1) {
+                background: url(/imgs/img1.jpg) no-repeat 50% / cover;
+            }
 
-    .carrossel img {
-        border-radius: .9rem;
-        opacity: 90%;
-        background-image: linear-gradient(transparent, black);
-    }
+            &:nth-of-type(2) {
+                background: url(/imgs/img2.jpg) no-repeat 50% / cover;
+            }
 
-    .carrossel .item1 .content a {
-        position: absolute;
-        z-index: 1;
-        color: white;
-        font-size: 5rem;
-        font-weight: bold;
-        padding: 10px;
-        top: 60%;
-    }
+            &:nth-of-type(3) {
+                background: url(/imgs/img3.jpg) no-repeat 50% / cover;
+            }
 
-    .carrossel .item2 .content a {
-        position: absolute;
-        z-index: 1;
-        color: white;
-        font-size: 5rem;
-        font-weight: bold;
-        padding: 10px;
-        top: 60%;
-    }
+            &:nth-of-type(4) {
+                background: url(/imgs/img4.jpg) no-repeat 50% / cover;
+            }
+            &:nth-of-type(5) {
+                background: url(/imgs/img1.jpg) no-repeat 50% / cover;
+            }
+            &:nth-of-type(6) {
+                background: url(/imgs/img2.jpg) no-repeat 50% / cover;
+            }
 
-    .carrossel .item3 .content a {
-        position: absolute;
-        z-index: 1;
-        color: white;
-        font-size: 5rem;
-        font-weight: bold;
-        padding: 10px;
-        top: 60%;
-    }
+            .content {
+                font-size: 1.5rem;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                opacity: 0;
+                flex-direction: column;
+                height: 100%;
+                justify-content: flex-end;
+                background: var(--verde-escuro);
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%);
+                transform: translatey(100%);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+                visibility: hidden;
 
-    .carrossel .item4 .content a {
-        position: absolute;
-        z-index: 1;
-        color: white;
-        font-size: 5rem;
-        font-weight: bold;
-        padding: 10px;
-        top: 60%;
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &:hover {
+                flex: 0 0 250px;
+                box-shadow: 1px 3px 15px var(--verde-main);
+                transform: translatey(-20px);
+            }
+
+            &:hover .content {
+                opacity: 1;
+                transform: translatey(0%);
+                visibility: visible;
+            }
+        }
     }
 
     /* parte 2 */
@@ -183,7 +188,7 @@
         padding: 2rem;
     }
 
-    .parte2 .quadros{
+    .parte2 .quadros {
         background-color: var(--verde-escuro);
         display: flex;
         flex-direction: row;
@@ -193,58 +198,79 @@
         gap: 20px;
     }
 
-    .parte2 .quadros .quadros-1{
+    .parte2 .quadros .quadros-1 {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         gap: 20px;
     }
 
+    .parte2 .quadros .quadro1 .text {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     .parte2 .quadros .quadro1 .text{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
+        border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    }
+
+    .parte2 .quadros .quadro1 .text a {
+        color: white;
+    }
+
+    .parte2 .quadros .quadro2 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte2 .quadros .quadro1 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte2 .quadros .quadro1 .text a{
+    .parte2 .quadros .quadro2 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte2 .quadros .quadro2 .text{
-        display: flex;
-        flex-direction: column;
-    }
-    .parte2 .quadros .quadro2 .text img{
-        border-radius: 1rem;
-    }
-
-    .parte2 .quadros .quadro2 .text a{
-        z-index: 1;
-        color: white;
-    }
-
-    .parte2 .quadros .quadros-2{
+    .parte2 .quadros .quadros-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5rem;
     }
 
-    .parte2 .quadros .quadro3 .text{
+    .parte2 .quadros .quadro3 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte2 .quadros .quadro3 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
-    .parte2 .quadros .quadro3 .text a{
-        z-index: 1;
+    .parte2 .quadros .quadro3 .text a {
         color: white;
     }
 
@@ -260,7 +286,7 @@
         top: -2.5rem;
     }
 
-    .parte2 .quadros .circulo i:hover{
+    .parte2 .quadros .circulo i:hover {
         background-color: var(--verde-main);
         color: var(--preto);
         transition: smooth;
@@ -284,7 +310,7 @@
         padding: 2rem;
     }
 
-    .parte3 .quadros{
+    .parte3 .quadros {
         background-color: var(--verde-escuro);
         display: flex;
         flex-direction: row;
@@ -294,60 +320,77 @@
         gap: 20px;
     }
 
-    .parte3 .quadros .quadros-1{
+    .parte3 .quadros .quadros-1 {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         gap: 20px;
     }
 
-    .parte3 .quadros .quadro1 .text{
+    .parte3 .quadros .quadro1 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte3 .quadros .quadro1 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
-    .parte3 .quadros .quadro1 .text a{
+    .parte3 .quadros .quadro1 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte3 .quadros .quadro2 .text{
+    .parte3 .quadros .quadro2 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte3 .quadros .quadro2 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-
-    .parte3 .quadros .quadro2 .text a{
+    .parte3 .quadros .quadro2 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte3 .quadros .quadros-2{
+    .parte3 .quadros .quadros-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5rem;
     }
 
-    .parte3 .quadros .quadro3 .text{
+    .parte3 .quadros .quadro3 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte3 .quadros .quadro3 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
-    .parte3 .quadros .quadro3 .text a{
+    .parte3 .quadros .quadro3 .text a {
         z-index: 1;
         color: white;
     }
@@ -364,114 +407,131 @@
         top: -2.5rem;
     }
 
-    .parte3 .quadros .circulo i:hover{
+    .parte3 .quadros .circulo i:hover {
         background-color: var(--verde-main);
         color: var(--preto);
         transition: smooth;
     }
 
 
-        /*parte 4*/
+    /*parte 4*/
 
-        .parte4 {
-            padding-top: 2rem;
-            background-color: var(--verde-escuro);
-            height: fit-content;
-        }
-    
-        .parte4 .title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--verde-claro);
-            z-index: -1;
-            padding: 2rem;
-        }
-    
-        .parte4 .quadros{
-            background-color: var(--verde-escuro);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            gap: 20px;
-        }
-    
-        .parte4 .quadros .quadros-1{
-            display: flex;
-            flex-direction:column;
-            gap: 20px;
-        }
-    
-        .parte4 .quadros .quadro1 .text{
-            display: flex;
-            flex-direction: column;
-        }
+    .parte4 {
+        padding-top: 2rem;
+        background-color: var(--verde-escuro);
+        height: fit-content;
+    }
 
-        .parte4 .quadros .quadro1 .text img{
-            border-radius: 1rem;
-        }
-    
-    
-        .parte4 .quadros .quadro1 .text a{
-            z-index: 1;
-            color: white;
-        }
-    
-        .parte4 .quadros .quadro2 .text{
-            display: flex;
-            flex-direction: column;
-        }
+    .parte4 .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--verde-claro);
+        z-index: -1;
+        padding: 2rem;
+    }
 
-        .parte4 .quadros .quadro2 .text img{
-            border-radius: 1rem;
-        }
-    
-        .parte4 .quadros .quadro2 .text a{
-            z-index: 1;
-            color: white;
-        }
-    
-        .parte4 .quadros .quadros-2{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5rem;
-        }
-    
-        .parte4 .quadros .quadro3 .text{
-            display: flex;
-            flex-direction: column;
-        }
+    .parte4 .quadros {
+        background-color: var(--verde-escuro);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+    }
 
-        .parte4 .quadros .quadro3 .text img{
-            border-radius: 1rem;
-        }    
-    
-        .parte4 .quadros .quadro3 .text a{
-            z-index: 1;
-            color: white;
-        }
-    
-        .parte4 .quadros .circulo i {
-            position: relative;
-            font-size: 100px;
-            z-index: 1;
-            color: var(--verde-escuro);
-            cursor: pointer;
-            background-color: var(--verde-claro);
-            padding: 40px;
-            border-radius: 50%;
-            top: -2.5rem;
-        }
-    
-        .parte4 .quadros .circulo i:hover{
-            background-color: var(--verde-main);
-            color: var(--preto);
-            transition: smooth;
-        }
+    .parte4 .quadros .quadros-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .parte4 .quadros .quadro1 .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
+        border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    }
+
+    .parte4 .quadros .quadro1 .text a {
+        z-index: 1;
+        color: white;
+    }
+
+    .parte4 .quadros .quadro2 .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
+        border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    }
+
+    .parte4 .quadros .quadro2 .text a {
+        z-index: 1;
+        color: white;
+    }
+
+    .parte4 .quadros .quadros-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .parte4 .quadros .quadro3 .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
+        border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    }
+
+    .parte4 .quadros .quadro3 .text a {
+        z-index: 1;
+        color: white;
+    }
+
+    .parte4 .quadros .circulo i {
+        position: relative;
+        font-size: 100px;
+        z-index: 1;
+        color: var(--verde-escuro);
+        cursor: pointer;
+        background-color: var(--verde-claro);
+        padding: 40px;
+        border-radius: 50%;
+        top: -2.5rem;
+    }
+
+    .parte4 .quadros .circulo i:hover {
+        background-color: var(--verde-main);
+        color: var(--preto);
+        transition: smooth;
+    }
 
     /*parte 5*/
 
@@ -492,7 +552,7 @@
         padding: 2rem;
     }
 
-    .parte5 .quadros{
+    .parte5 .quadros {
         background-color: var(--verde-escuro);
         display: flex;
         flex-direction: row;
@@ -502,76 +562,100 @@
         gap: 20px;
     }
 
-    .parte5 .quadros .quadros-1{
+    .parte5 .quadros .quadros-1 {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         gap: 20px;
     }
 
-    .parte5 .quadros .quadro1 .text{
+    .parte5 .quadros .quadro1 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte5 .quadros .quadro1 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte5 .quadros .quadro1 .text a{
+    .parte5 .quadros .quadro1 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte5 .quadros .quadro2 .text{
-        display: flex;
+    .parte5 .quadros .quadro2 .text {
+    display: flex;
         flex-direction: column;
-    }
-
-    .parte5 .quadros .quadro2 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte5 .quadros .quadro2 .text a{
+    .parte5 .quadros .quadro2 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte5 .quadros .quadros-2{
+    .parte5 .quadros .quadros-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    .parte5 .quadros .quadro3 .text{
+    .parte5 .quadros .quadro3 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte5 .quadros .quadro3 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte5 .quadros .quadro3 .text a{
+    .parte5 .quadros .quadro3 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte5 .quadros .quadro4 .text{
+    .parte5 .quadros .quadro4 .text {
         display: flex;
         flex-direction: column;
-    }
-
-    .parte5 .quadros .quadro4 .text img{
+        justify-content: flex-end;
+        padding: 10px;
+        width: 350px;
+        height: 230px;
         border-radius: 1rem;
+        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
+                background: linear-gradient(0deg,
+                        var(--preto) 0%,
+                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte5 .quadros .quadro4 .text a{
+    .parte5 .quadros .quadro4 .text a {
         z-index: 1;
         color: white;
     }
 
-    footer{
+    footer {
         padding-top: 3rem;
         padding-bottom: 2rem;
         display: flex;
@@ -581,7 +665,7 @@
 
     }
 
-    footer h6{
+    footer h6 {
         font-size: .9rem;
         color: white;
     }
