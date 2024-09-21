@@ -34,41 +34,55 @@
         min-height: 100vh;
         display: grid;
         place-items: center;
-    }
-    header {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .header {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 110%;
+        padding: 2rem 30%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 100;
         font-size: 3rem;
-        height: 100px;
-        cursor: pointer;
+
     }
 
-    h4:hover {
-        top: 1.9rem;
-        transition: smooth;
+    .seta i{
+        color: var(--verde-claro);
+        align-items: center;
+        justify-content: left;
     }
 
-
-    h4 {
+    .title {
         position: absolute;
         top: 2rem;
         color: white;
     }
 
+    .title:hover {
+        top: 1.9rem;
+        transition: smooth;
+    }
+
     .icon {
         position: absolute;
-        top: -50px;
         left: 85%;
 
     }
 
-    .icon i {
+    .icon .fa-regular {
         position: relative;
-        font-size: 40px;
+        left: -8px;
+        top: -8px;
         height: 55px;
-        left: 85px;
-        top: 4.1rem;
         z-index: 1;
         color: var(--verde-escuro);
         cursor: pointer;
@@ -76,53 +90,70 @@
 
     .icon a {
         position: absolute;
-        width: 55px;
-        height: 55px;
-        left: 75px;
-        top: 5rem;
+        width: 75px;
+        height: 75px;
+        left: -25px;
+        top: -.9rem;
+        z-index: -1;
 
         background: #B0D7C0;
         border-radius: 80px;
     }
 
-    .icon:hover {
-        top: -3.3rem;
-        transition: smooth;
-    }
-
-    main{
+    main {
         background-color: var(--verde-escuro);
+        padding-top: 9rem;
     }
 
-    form{
+    .fundo {
+        width: 1000px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        border: solid 5px white;
+        border-radius: 1rem;
+        background-color: var(--verde-claro);
+        padding: 15px;
+    }
+
+    form {
         display: flex;
         justify-content: center;
         gap: 10px;
     }
 
-    input{
+    input {
         background-color: var(--verde-claro);
         padding: 5px;
         color: var(--verde-escuro);
         border-radius: 10px;
+        border: solid 3px var(--verde-main);
+
     }
 
-    button{
+    button {
         background-color: var(--verde-main);
         color: white;
         padding: 10px;
         border-radius: 10px;
+        cursor: pointer;
     }
 
-    form :-ms-input-placeholder{
-        font-family: 'Suse', sans-serif;
-        color: var(--verde-escuro);
+    button:hover {
+        background-color: var(--verde-escuro);
+        color: var(--verde-main);
     }
 
-    ul{
+    ul {
         display: flex;
         flex-direction: column;
-        justify-content: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: #000000;
+        list-style-type: none;
+        padding: 20px;
     }
 
-}   
+}
