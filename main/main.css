@@ -125,9 +125,11 @@
             &:nth-of-type(4) {
                 background: url(/imgs/img4.jpg) no-repeat 50% / cover;
             }
+
             &:nth-of-type(5) {
                 background: url(/imgs/img1.jpg) no-repeat 50% / cover;
             }
+
             &:nth-of-type(6) {
                 background: url(/imgs/img2.jpg) no-repeat 50% / cover;
             }
@@ -207,20 +209,20 @@
     .parte2 .quadros .quadro1 .text {
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    .parte2 .quadros .quadro1 .text{
+    .parte2 .quadros .quadro1 .text {
         justify-content: flex-end;
         padding: 10px;
         width: 350px;
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte2 .quadros .quadro1 .text a {
@@ -236,10 +238,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte2 .quadros .quadro2 .text a {
@@ -263,10 +265,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
@@ -310,7 +312,7 @@
         padding: 2rem;
     }
 
-    .parte3 .quadros {
+    .parte3 .posts {
         background-color: var(--verde-escuro);
         display: flex;
         flex-direction: row;
@@ -320,13 +322,13 @@
         gap: 20px;
     }
 
-    .parte3 .quadros .quadros-1 {
+    .parte3 .posts .quadros-1 {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .parte3 .quadros .quadro1 .text {
+    .parte3 .posts .quadro1 .text {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -334,20 +336,19 @@
         width: 350px;
         height: 230px;
         border-radius: 1rem;
-        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
-    .parte3 .quadros .quadro1 .text a {
+    .parte3 .posts .quadro1 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte3 .quadros .quadro2 .text {
+    .parte3 .posts .quadro2 .text {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -355,26 +356,25 @@
         width: 350px;
         height: 230px;
         border-radius: 1rem;
-        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
-    .parte3 .quadros .quadro2 .text a {
+    .parte3 .posts .quadro2 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte3 .quadros .quadros-2 {
+    .parte3 .posts .quadros-2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5rem;
     }
 
-    .parte3 .quadros .quadro3 .text {
+    .parte3 .posts .quadro3 .text {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -382,20 +382,19 @@
         width: 350px;
         height: 230px;
         border-radius: 1rem;
-        background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
 
-    .parte3 .quadros .quadro3 .text a {
+    .parte3 .posts .quadro3 .text a {
         z-index: 1;
         color: white;
     }
 
-    .parte3 .quadros .circulo i {
+    .parte3 .posts .circulo i {
         position: relative;
         font-size: 100px;
         z-index: 1;
@@ -407,7 +406,7 @@
         top: -2.5rem;
     }
 
-    .parte3 .quadros .circulo i:hover {
+    .parte3 .posts .circulo i:hover {
         background-color: var(--verde-main);
         color: var(--preto);
         transition: smooth;
@@ -457,10 +456,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte4 .quadros .quadro1 .text a {
@@ -477,10 +476,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte4 .quadros .quadro2 .text a {
@@ -504,10 +503,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte4 .quadros .quadro3 .text a {
@@ -577,10 +576,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte5 .quadros .quadro1 .text a {
@@ -589,7 +588,7 @@
     }
 
     .parte5 .quadros .quadro2 .text {
-    display: flex;
+        display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 10px;
@@ -597,10 +596,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte5 .quadros .quadro2 .text a {
@@ -624,10 +623,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte5 .quadros .quadro3 .text a {
@@ -644,10 +643,10 @@
         height: 230px;
         border-radius: 1rem;
         background: url(/imgs/texto\ texto\ texto.png) no-repeat 50% / cover;
-                background: linear-gradient(0deg,
-                        var(--preto) 0%,
-                        rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
-                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        background: linear-gradient(0deg,
+                var(--preto) 0%,
+                rgba(255, 255, 255, 0) 100%), url(/imgs/texto\ texto\ texto.png);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     }
 
     .parte5 .quadros .quadro4 .text a {
