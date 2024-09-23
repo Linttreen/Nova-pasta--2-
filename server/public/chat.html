@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/server/public/chat.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"
+    integrity="sha512-11t8Q+vY9JlCrr+PveZKTYJq8n7O09Y5X/pk/aMd3vJugSvu4xOunGEUzaADqL3I8cZKE/pBwwCfXzDkRJh2sQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="/server/public/chat.js"></script>
+    <script src="https://kit.fontawesome.com/f1a0ba62a2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="seta">
+            <a href="/main/main.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+
+        <div class="title">
+            <a href="/main/main.html">
+                <h4>connectFLU</h4>
+            </a>
+        </div>
+
+        <div class="icon">
+            <i class="fa-regular fa-user"></i>
+            <a href="/entrar/entrar.html"></a>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="fundo">
+            <ul></ul>
+            <form>
+                <input type="text" placeholder="Your Message">
+                <button>Send</button>
+            </form>
+            <p class="activity"></p>
+        </div>
+
+    </main>
+</body>
+
+</html>
