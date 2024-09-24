@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/entrar/entrar.css">
+    <script defer src="/entrar/entrar.js"></script>
+    <link rel="shortcut icon" href="/imgs/logo.png" />
     <title>ConnectFlu</title>
 </head>
 <body>
@@ -12,10 +14,14 @@
             <img src="/imgs/image.png" width="700">
         </div>
     <div class="btn-box">
-        <input type="email" name="email" id="email" pattern=".+example\.com" placeholder="email"/>
-        <input type="password" name="senha" id="senha" minlength="8" pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}" placeholder="senha" required/>
+        <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="email"/>
+        <div class="error" id="email-required-error">Email é obrigatório</div>
+        <div class="error" id="email-invalid-error">Email é inválido</div>
+        
+        <input type="password" name="senha" id="senha" minlength="8" onchange="onChangePassword()" placeholder="senha" required/>
+        <div class="error" id="password-required-error">Senha é obrigatória</div>
 
-        <input type="submit" value="entrar"/>
+        <input type="submit" value="entrar" onclick="login()"/>
 
         <a href="/registrar/registro.html" class="text">Não tem conta? Clique aqui e cadastre-se!</a>
     </div>

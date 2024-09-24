@@ -1,8 +1,9 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+// Quando a página é carregada, exibe os posts
+window.addEventListener('DOMContentLoaded', () => {
     const posts = JSON.parse(localStorage.getItem('posts')) || [];
 
     if (posts.length > 0) {
-        // Se tiver posts, vamos exibir os 3 últimos
+        // Se houver posts, exiba os três últimos nos quadros
         const quadro1Nome = document.querySelector('.quadro1 .nome');
         const quadro1Prof = document.querySelector('.quadro1 .prof');
         const quadro2Nome = document.querySelector('.quadro2 .nome');
@@ -27,3 +28,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 });
+
