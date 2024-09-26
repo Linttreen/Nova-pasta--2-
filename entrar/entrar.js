@@ -1,3 +1,8 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+import { getAuth } from "firebase/auth";
+
+
 function onChangeEmail() {
     toggleButtonsDisable();
     toggleEmailErrors();
@@ -6,6 +11,15 @@ function onChangeEmail() {
 function onChangePassword() {
     toggleButtonsDisable();
     togglePasswordErrors();
+}
+
+function login() {
+    firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
+        window.location.href = "/main/main.html";
+    }).catch(error => {
+        console.log('error', error)
+    });
+    App.initializeApp();
 }
 
 function toggleEmailErrors() {
@@ -49,7 +63,3 @@ const form = {
     passwordRequiredError: () => document.getElementById("password-required-error"),
     recoverPasswordButton: () => document.getElementById("recover-password-button"),
 } 
-
-function login() {
-    window.location.href = "/main/main.html";
-}

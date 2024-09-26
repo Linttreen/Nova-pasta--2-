@@ -49,9 +49,14 @@
         height: 9rem;
         justify-content: space-evenly;
         height: 8rem;
+        gap: 25px;
     }
 
-    .btn-box input[type="email"] {
+    .btn-box .form-field {
+        height: 2.5rem;
+    }
+
+    .btn-box .form-field input[type="email"] {
         position: relative;
         display: inline-flex;
         justify-content: center;
@@ -61,19 +66,19 @@
         background: var(--verde-claro);
         border: .2rem solid var(--verde-claro);
         border-radius: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         font-weight: 400;
         letter-spacing: .1rem;
         color: var(--verde-escuro);
         margin: 10px 0;
     }
 
-    .btn-box input[type="email"]::placeholder{
+    .btn-box .form-field input[type="email"]::placeholder{
         color: var(--verde-escuro);
         padding: 0 15px;
     }
 
-    .btn-box input[type="password"] {
+    .btn-box .form-field input[type="password"] {
         position: relative;
         display: inline-flex;
         justify-content: center;
@@ -83,7 +88,7 @@
         background: var(--verde-claro);
         border: .2rem solid var(--verde-claro);
         border-radius: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         font-weight: 400;
         letter-spacing: .1rem;
         color: var(--verde-escuro);
@@ -112,8 +117,6 @@
         color: var(--verde-claro);
         margin: 10px 0;
     }
-
-
 
     .btn-box input[type="submit"]:hover{
         color: #2B766D;
